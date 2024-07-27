@@ -13,11 +13,10 @@
 # Display Author Details
 # def display_details():
 
-# Display menu (optional)
-# def display_menu()
-
 # Get validate menu choice
 # def get_menu_choice():
+    # Display menu (optional)
+    # def display_menu()
 
 # Define offset value
 # def get_offset():
