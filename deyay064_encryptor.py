@@ -7,3 +7,14 @@
 # This is my own work as defined by the University's Academic Misconduct Policy.
 # 
 
+
+# def main():
+
+# def display_details():
+
+# def get_menu_choice():
+
+# def get_offset():
+
+# if __name__ == '__main__':
+#     main()
