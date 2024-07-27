@@ -16,5 +16,10 @@
 
 # def get_offset():
 
+# # existing functions to be used
+# ord()
+# chr()
+
+
 # if __name__ == '__main__':
 #     main()
