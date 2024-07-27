@@ -19,6 +19,17 @@
 # # existing functions to be used
 # ord()
 # chr()
+# int()
+# input()
+# print()
+# range()
+# pow()
+# len()
+# str()aa
+# string_name[index]
+# isdigit()
+# append()
+
 
 
 # if __name__ == '__main__':
