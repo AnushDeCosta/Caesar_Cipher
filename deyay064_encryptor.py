@@ -46,10 +46,26 @@
 # if __name__ == '__main__':
 #     main()
 
+
+# Print Menu options
 print("\n*** Menu ***")
 print("1. Encrypt string")
 print("2. Decrypt string")
 print("3. Brute force decryption")
 print("4. Quit")
 
+# Prompt user for input
 choice = input("\nWhat would you like to do [1,2,3,4]? \n")
+
+# Process user input
+if choice == '1':
+    print("In command 1 - encrypt string")
+elif choice == '2':
+    print("In command 2 - decrypt string")
+elif choice == '3':
+    print("In command 3 - brute force decryption")
+elif choice == '4':
+    print("Goodbye.")
+else:
+    print("Invalid choice, please enter either 1, 2, 3, or 4.")
+
