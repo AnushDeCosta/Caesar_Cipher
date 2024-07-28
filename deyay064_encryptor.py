@@ -64,7 +64,7 @@ while keep_running:
     elif choice == '2':
         print("In command 2 - decrypt string")
     elif choice == '3':
-        print("In command 3 - brute force decryption")
+        print("In command 3 - brute force")
     elif choice == '4':
         print("Goodbye.")
         keep_running = False
