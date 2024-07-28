@@ -45,3 +45,11 @@
 
 # if __name__ == '__main__':
 #     main()
+
+print("\n*** Menu ***")
+print("1. Encrypt string")
+print("2. Decrypt string")
+print("3. Brute force decryption")
+print("4. Quit")
+
+choice = input("\nWhat would you like to do [1,2,3,4]? \n")
