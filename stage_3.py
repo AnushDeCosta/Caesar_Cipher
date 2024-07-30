@@ -7,7 +7,7 @@
 # This is my own work as defined by the University's Academic Misconduct Policy.
 #
 
-# Implementing the Encrypt Command
+# Implementing the Decrypt Command
 
 def display_menu():
     print("\n*** Menu ***\n")
@@ -36,6 +36,12 @@ def get_encryption_input(min_offset, max_offset):
     return user_string, offset
 
 
+def get_decryption_input(min_offset, max_offset):
+    cipher_text = input("\nPlease enter the string to decrypt: ")
+    offset = get_offset(min_offset, max_offset)
+    return cipher_text, offset
+
+
 def encrypt_string(user_string, offset, min_ascii, max_ascii):
     encrypted_string = ""
     for char in user_string:
@@ -45,6 +51,17 @@ def encrypt_string(user_string, offset, min_ascii, max_ascii):
             new_ascii_value = min_ascii + (new_ascii_value - max_ascii - 1)
         encrypted_string += chr(new_ascii_value)
     return encrypted_string
+
+
+def decrypt_string(cipher_text, offset, min_ascii, max_ascii):
+    decrypted_string = ""
+    for char in cipher_text:
+        ascii_value = ord(char)
+        new_ascii_value = ascii_value - offset
+        if new_ascii_value < min_ascii:
+            new_ascii_value = max_ascii - (min_ascii - new_ascii_value - 1)
+        decrypted_string += chr(new_ascii_value)
+    return decrypted_string
 
 
 def main():
