@@ -21,11 +21,9 @@ def get_menu_choice():
 
 
 def get_offset(min_offset, max_offset):
-    offset = input(f"Please enter offset value ({
-                   min_offset} to {max_offset}): ")
+    offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
     while not offset.isdigit() or int(offset) < min_offset or int(offset) > max_offset:
-        offset = input(f"Please enter offset value ({
-                       min_offset} to {max_offset}): ")
+        offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
     return int(offset)
 
 
