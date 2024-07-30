@@ -9,7 +9,7 @@
 # Including All 3 Required Function
 
 def display_details():
-    print("File     : deyay064_encryptor.py")
+    print("\nFile     : deyay064_encryptor.py")
     print("Author   : Anush De Costa")
     print("Stud ID  : 110454712")
     print("Email ID : deyay064@mymail.unisa.edu.au")
@@ -31,11 +31,9 @@ def get_menu_choice():
 
 
 def get_offset(min_offset, max_offset):
-    offset = input(f"Please enter offset value ({
-                   min_offset} to {max_offset}): ")
+    offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
     while not offset.isdigit() or int(offset) < min_offset or int(offset) > max_offset:
-        offset = input(f"Please enter offset value ({
-                       min_offset} to {max_offset}): ")
+        offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
     return int(offset)
 
 
@@ -90,9 +88,9 @@ def main():
     min_offset = 1
     max_offset = 94
 
+    display_details()
     keep_running = True
     while keep_running:
-        display_menu()
         choice = get_menu_choice()
 
         if choice == '1':
