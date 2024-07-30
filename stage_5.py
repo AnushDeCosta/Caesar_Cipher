@@ -1,7 +1,6 @@
 #
-#  File     : deyay064_encryptor.py
+# File     : deyay064_encryptor.py
 # Author   : Anush De Costa
-# Stud ID  : 110454712
 # Email ID : deyay064@mymail.unisa.edu.au
 # Description: Programming Assignment 2 – Caesar Cipher
 # This is my own work as defined by the University's Academic Misconduct Policy.
@@ -26,9 +25,11 @@ def get_menu_choice():
 
 
 def get_offset(min_offset, max_offset):
-    offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
+    offset = input(f"Please enter offset value ({
+                   min_offset} to {max_offset}): ")
     while not offset.isdigit() or int(offset) < min_offset or int(offset) > max_offset:
-        offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
+        offset = input(f"Please enter offset value ({
+                       min_offset} to {max_offset}): ")
     return int(offset)
 
 

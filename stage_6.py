@@ -6,18 +6,28 @@
 # This is my own work as defined by the University's Academic Misconduct Policy.
 #
 
-# Implementing the Decrypt Command
+# Including All 3 Required Function
 
-def display_menu():
+def display_details():
+    print("File     : deyay064_encryptor.py")
+    print("Author   : Anush De Costa")
+    print("Stud ID  : 110454712")
+    print("Email ID : deyay064@mymail.unisa.edu.au")
+    print("Description: Programming Assignment 2 - Caesar Cipher")
+    print("This is my own work as defined by the University's Academic Misconduct Policy.")
+
+
+def get_menu_choice():
     print("\n*** Menu ***\n")
     print("1. Encrypt string")
     print("2. Decrypt string")
     print("3. Brute force decryption")
     print("4. Quit")
-
-
-def get_menu_choice():
-    return input("\nWhat would you like to do [1,2,3,4]? ")
+    choice = input("\nWhat would you like to do [1,2,3,4]? ")
+    while choice not in ['1', '2', '3', '4']:
+        print("Invalid choice, please enter either 1, 2, 3, or 4.")
+        choice = input("\nWhat would you like to do [1,2,3,4]? ")
+    return choice
 
 
 def get_offset(min_offset, max_offset):
@@ -39,6 +49,17 @@ def get_decryption_input(min_offset, max_offset):
     cipher_text = input("\nPlease enter the string to decrypt: ")
     offset = get_offset(min_offset, max_offset)
     return cipher_text, offset
+
+
+def get_brute_force_input():
+    return input("\nPlease enter string to decrypt: ")
+
+
+def brute_force_decrypt(cipher_text, min_offset, max_offset, min_ascii, max_ascii):
+    for offset in range(min_offset, max_offset + 1):
+        decrypted_string = decrypt_string(
+            cipher_text, offset, min_ascii, max_ascii)
+        print(f"Offset {offset}: {decrypted_string}")
 
 
 def encrypt_string(user_string, offset, min_ascii, max_ascii):
@@ -86,12 +107,12 @@ def main():
                 encrypted_string, offset, min_ascii, max_ascii)
             print(f"\nDecrypted string:\n{decrypted_string}"),
         elif choice == '3':
-            print("In command 3 - brute force decryption")
+            cipher_text = get_brute_force_input()
+            brute_force_decrypt(cipher_text, min_offset,
+                                max_offset, min_ascii, max_ascii)
         elif choice == '4':
             print("\nGoodbye.\n")
             keep_running = False
-        else:
-            print("Invalid choice, please enter either 1, 2, 3, or 4.")
 
 
 if __name__ == "__main__":
