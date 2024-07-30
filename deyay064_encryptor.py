@@ -1,11 +1,11 @@
 #
-#  File     : deyay064_encryptor.py
+# File     : deyay064_encryptor.py
 # Author   : Anush De Costa
 # Stud ID  : 110454712
 # Email ID : deyay064@mymail.unisa.edu.au
 # Description: Programming Assignment 2 – Caesar Cipher
 # This is my own work as defined by the University's Academic Misconduct Policy.
-# 
+#
 
 
 # def main():
@@ -15,8 +15,8 @@
 
 # Get validate menu choice
 # def get_menu_choice():
-    # Display menu (optional)
-    # def display_menu()
+# Display menu (optional)
+# def display_menu()
 
 # Define offset value
 # def get_offset():
@@ -40,7 +40,6 @@
 # string_name[index]
 # isdigit()
 # append()
-
 
 
 # if __name__ == '__main__':
