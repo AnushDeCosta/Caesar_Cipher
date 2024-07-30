@@ -22,11 +22,9 @@ def get_menu_choice():
 
 
 def get_offset(min_offset, max_offset):
-    offset = input(f"Please enter offset value ({
-                   min_offset} to {max_offset}): ")
+    offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
     while not offset.isdigit() or int(offset) < min_offset or int(offset) > max_offset:
-        offset = input(f"Please enter offset value ({
-                       min_offset} to {max_offset}): ")
+        offset = input(f"Please enter offset value ({min_offset} to {max_offset}): ")
     return int(offset)
 
 
@@ -79,13 +77,17 @@ def main():
             user_string, offset = get_encryption_input(min_offset, max_offset)
             encrypted_string = encrypt_string(
                 user_string, offset, min_ascii, max_ascii)
-            print("\nEncrypted string:\n", encrypted_string)
+            print(f"\nEncrypted string:\n{encrypted_string}")
         elif choice == '2':
-            print("In command 2 - decrypt string")
+            encrypted_string, offset = get_decryption_input(
+                min_offset, max_offset)
+            decrypted_string = decrypt_string(
+                encrypted_string, offset, min_ascii, max_ascii)
+            print(f"\nDecrypted string:\n{decrypted_string}"),
         elif choice == '3':
             print("In command 3 - brute force decryption")
         elif choice == '4':
-            print("\nGoodbye.")
+            print("\nGoodbye.\n")
             keep_running = False
         else:
             print("Invalid choice, please enter either 1, 2, 3, or 4.")
