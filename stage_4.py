@@ -39,6 +39,15 @@ def get_decryption_input(min_offset, max_offset):
     offset = get_offset(min_offset, max_offset)
     return cipher_text, offset
 
+def get_brute_force_input():
+    return input("\nPlease enter string to decrypt: ")
+
+def brute_force_decrypt(cipher_text, min_offset, max_offset, min_ascii, max_ascii):
+    for offset in range(min_offset, max_offset + 1):
+        decrypted_string = decrypt_string(cipher_text, offset, min_ascii, max_ascii)
+        print(f"Offset {offset}: {decrypted_string}")
+
+
 
 def encrypt_string(user_string, offset, min_ascii, max_ascii):
     encrypted_string = ""
@@ -85,7 +94,8 @@ def main():
                 encrypted_string, offset, min_ascii, max_ascii)
             print(f"\nDecrypted string:\n{decrypted_string}"),
         elif choice == '3':
-            print("In command 3 - brute force decryption")
+            cipher_text = get_brute_force_input()
+            brute_force_decrypt(cipher_text, min_offset, max_offset, min_ascii, max_ascii)
         elif choice == '4':
             print("\nGoodbye.\n")
             keep_running = False
