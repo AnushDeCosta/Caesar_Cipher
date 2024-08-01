@@ -2,8 +2,10 @@
 # File     : cipher_functions.py
 # Author   : Anush De Costa
 # Email ID : deyay064
-# Description: Contains functions for encryption, decryption, and brute force decryption using the Caesar Cipher method.
-# This is my own work as defined by the University's Academic Misconduct Policy.
+# Description: Contains functions for encryption, decryption,
+#              and brute force decryption using the Caesar Cipher method.
+# This is my own work as defined by the University's
+# Academic Misconduct Policy.
 #
 
 
@@ -45,5 +47,6 @@ def brute_force_decrypt(cipher_text, min_offset, max_offset, min_ascii, max_asci
     """
     for offset in range(min_offset, max_offset + 1):
         decrypted_string = decrypt_string(
-            cipher_text, offset, min_ascii, max_ascii)
+            cipher_text, offset, min_ascii, max_ascii
+        )
         print(f"Offset {offset}: {decrypted_string}")
