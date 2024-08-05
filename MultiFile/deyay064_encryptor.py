@@ -17,18 +17,18 @@ from cipher_functions import (
     encrypt_string, decrypt_string, brute_force_decrypt
 )
 
+# Constants for ASCII range and offset limits.
+MIN_ASCII = 32  # Minimum ASCII value for space.
+MAX_ASCII = 126  # Maximum ASCII value for tilde (~).
+MIN_OFFSET = 1  # Minimum Caesar Cipher offset.
+MAX_OFFSET = 94  # Maximum Caesar Cipher offset.
+
 
 def main():
     """
     Main function to drive the program.
     Displays the details, shows the menu, and handles user choices.
     """
-
-    # ASCII range for printable characters and offset limits.
-    min_ascii = 32  # Minimum ASCII value for space.
-    max_ascii = 126  # Maximum ASCII value for tilde (~).
-    min_offset = 1  # Minimum Caesar Cipher offset.
-    max_offset = 94  # Maximum Caesar Cipher offset.
 
     # Display author details.
     display_details()
@@ -40,17 +40,17 @@ def main():
 
         # Encrypt a string.
         if choice == '1':
-            user_string, offset = get_encryption_input(min_offset, max_offset)
+            user_string, offset = get_encryption_input(MIN_OFFSET, MAX_OFFSET)
             encrypted_string = encrypt_string(
-                user_string, offset, min_ascii, max_ascii
+                user_string, offset, MIN_ASCII, MAX_ASCII
             )
             print(f"\nEncrypted string:\n{encrypted_string}")
 
         # Decrypt a string.
         elif choice == '2':
-            cipher_text, offset = get_decryption_input(min_offset, max_offset)
+            cipher_text, offset = get_decryption_input(MIN_OFFSET, MAX_OFFSET)
             decrypted_string = decrypt_string(
-                cipher_text, offset, min_ascii, max_ascii
+                cipher_text, offset, MIN_ASCII, MAX_ASCII
             )
             print(f"\nDecrypted string:\n{decrypted_string}")
 
@@ -58,7 +58,7 @@ def main():
         elif choice == '3':
             cipher_text = get_brute_force_input()
             brute_force_decrypt(
-                cipher_text, min_offset, max_offset, min_ascii, max_ascii
+                cipher_text, MIN_OFFSET, MAX_OFFSET, MIN_ASCII, MAX_ASCII
             )
 
         # Quit the program.
